@@ -1,0 +1,63 @@
+
+https://github.com/aisdhar/BankUsersG99
+
+till second commit check BankUsersG99 history or all commits
+https://github.com/aisdhar/BankUsersG99/commits/master
+
+below code for - till second commit - logs are added -Logger 
+changes in BaseClass and in TC_001LoginTest
+
+output- - test_output - index.html.
+output-testngreport>> testoutput- bank99-systemTest.html
+************************************************************************
+public class BaseClass {
+	public String baseURL = "http://demo.guru99.com/V4/";
+	public String username = "mngr369021";
+	public String password = "ujEsunE";
+	public static WebDriver driver;
+
+	public static Logger logger;
+	
+	@BeforeClass
+	public void setup()
+	{
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		logger = Logger.getLogger("BankG99");
+		PropertyConfigurator.configure("log4j.properties");
+	}
+
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
+	}
+	
+}
+
+
+************************************************************************
+public class TC_01LoginTest extends BaseClass {
+@Test
+	public void LoginTest()
+	{
+		driver.get(baseURL);
+		logger.info("URL is opened");
+		
+		LoginPageObject lp = new LoginPageObject(driver);
+		lp.setUserName(username);   logger.info("TC1- Entered username");
+		lp.setPassword(password);   logger.info("TC1- Entered password");
+		lp.clickLogin();            logger.info("TC1- Login is clicked");
+
+		if(driver.getTitle().equals("Guru99 Bank Manager HomePage"))
+		{
+			Assert.assertTrue(true);
+			logger.info("TC1- Login test passed");
+		}
+		else
+		{
+
+			Assert.assertTrue(false);
+			logger.info("TC1- Login test failed");
+		}
+	}

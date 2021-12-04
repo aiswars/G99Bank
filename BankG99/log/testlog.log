@@ -1,0 +1,80 @@
+2021-12-04 15:50:17,967 - BankG99 -INFO - URL is opened
+2021-12-04 15:50:18,067 - BankG99 -INFO - TC1- Entered username
+2021-12-04 15:50:18,126 - BankG99 -INFO - TC1- Entered password
+2021-12-04 15:50:18,690 - BankG99 -INFO - TC1- Login is clicked
+2021-12-04 15:50:18,695 - BankG99 -INFO - TC1- Login test passed
+2021-12-04 16:06:43,298 - BankG99 -INFO - URL is opened
+2021-12-04 16:06:43,399 - BankG99 -INFO - TC1- Entered username
+2021-12-04 16:06:43,463 - BankG99 -INFO - TC1- Entered password
+2021-12-04 16:06:43,867 - BankG99 -INFO - TC1- Login is clicked
+2021-12-04 16:06:43,873 - BankG99 -INFO - TC1- Login test passed
+2021-12-04 16:48:24,395 - BankG99 -INFO - URL is opened
+2021-12-04 16:48:24,483 - BankG99 -INFO - TC1- Entered username
+2021-12-04 16:48:24,540 - BankG99 -INFO - TC1- Entered password
+2021-12-04 16:48:24,918 - BankG99 -INFO - TC1- Login is clicked
+2021-12-04 16:48:24,923 - BankG99 -INFO - TC1- Login test passed
+2021-12-04 17:16:02,607 - BankG99 -INFO - URL is opened
+2021-12-04 17:16:02,706 - BankG99 -INFO - TC1- Entered username
+2021-12-04 17:16:02,769 - BankG99 -INFO - TC1- Entered password
+2021-12-04 17:16:03,158 - BankG99 -INFO - TC1- Login is clicked
+2021-12-04 17:16:03,165 - BankG99 -INFO - TC1- Login test passed
+2021-12-04 17:27:09,643 - BankG99 -INFO - URL is opened
+2021-12-04 17:27:09,742 - BankG99 -INFO - TC1- Entered username
+2021-12-04 17:27:09,810 - BankG99 -INFO - TC1- Entered password
+2021-12-04 17:27:10,180 - BankG99 -INFO - TC1- Login is clicked
+2021-12-04 17:27:10,189 - BankG99 -INFO - TC1- Login test passed
+2021-12-04 17:45:01,239 - BankG99 -INFO - URL is opened
+2021-12-04 17:45:01,344 - BankG99 -INFO - TC1- Entered username
+2021-12-04 17:45:01,403 - BankG99 -INFO - TC1- Entered password
+2021-12-04 17:45:01,768 - BankG99 -INFO - TC1- Login is clicked
+2021-12-04 17:45:01,776 - BankG99 -INFO - TC1- Login test passed
+2021-12-04 17:47:01,198 - BankG99 -INFO - URL is opened
+2021-12-04 17:47:01,294 - BankG99 -INFO - TC1- Entered username
+2021-12-04 17:47:01,356 - BankG99 -INFO - TC1- Entered password
+2021-12-04 17:47:01,719 - BankG99 -INFO - TC1- Login is clicked
+2021-12-04 17:47:01,723 - BankG99 -INFO - TC1- Login test passed
+2021-12-04 17:47:07,122 - BankG99 -INFO - user name provided
+2021-12-04 17:47:07,171 - BankG99 -INFO - password provided
+2021-12-04 17:47:10,356 - BankG99 -INFO - Login failed
+2021-12-04 17:47:10,698 - BankG99 -INFO - user name provided
+2021-12-04 17:47:10,734 - BankG99 -INFO - password provided
+2021-12-04 17:47:13,944 - BankG99 -INFO - Login failed
+2021-12-04 17:47:14,371 - BankG99 -INFO - user name provided
+2021-12-04 17:47:14,408 - BankG99 -INFO - password provided
+2021-12-04 17:47:17,548 - BankG99 -INFO - Login failed
+2021-12-04 17:47:17,926 - BankG99 -INFO - user name provided
+2021-12-04 17:47:17,962 - BankG99 -INFO - password provided
+2021-12-04 17:47:21,360 - BankG99 -INFO - Login passed
+2021-12-04 17:47:25,126 - BankG99 -INFO - user name provided
+2021-12-04 17:47:25,162 - BankG99 -INFO - password provided
+2021-12-04 17:47:28,309 - BankG99 -INFO - Login failed
+2021-12-04 17:47:28,621 - BankG99 -INFO - user name provided
+2021-12-04 17:47:28,654 - BankG99 -INFO - password provided
+2021-12-04 17:47:31,966 - BankG99 -INFO - Login passed
+2021-12-04 17:58:35,105 - BankG99 -INFO - URL is opened
+2021-12-04 17:58:35,208 - BankG99 -INFO - TC1- Entered username
+2021-12-04 17:58:35,268 - BankG99 -INFO - TC1- Entered password
+2021-12-04 17:58:35,589 - BankG99 -INFO - TC1- Login is clicked
+2021-12-04 17:58:35,594 - BankG99 -INFO - TC1- Login test passed
+2021-12-04 17:58:38,140 - BankG99 -INFO - user name provided
+2021-12-04 17:58:38,195 - BankG99 -INFO - password provided
+2021-12-04 17:58:41,400 - BankG99 -INFO - Login failed
+2021-12-04 17:58:41,745 - BankG99 -INFO - user name provided
+2021-12-04 17:58:41,782 - BankG99 -INFO - password provided
+2021-12-04 17:58:44,985 - BankG99 -INFO - Login failed
+2021-12-04 17:58:45,288 - BankG99 -INFO - user name provided
+2021-12-04 17:58:45,323 - BankG99 -INFO - password provided
+2021-12-04 17:58:48,503 - BankG99 -INFO - Login failed
+2021-12-04 17:58:48,926 - BankG99 -INFO - user name provided
+2021-12-04 17:58:48,963 - BankG99 -INFO - password provided
+2021-12-04 17:58:52,356 - BankG99 -INFO - Login passed
+2021-12-04 17:58:56,183 - BankG99 -INFO - user name provided
+2021-12-04 17:58:56,218 - BankG99 -INFO - password provided
+2021-12-04 17:58:59,403 - BankG99 -INFO - Login failed
+2021-12-04 17:58:59,690 - BankG99 -INFO - user name provided
+2021-12-04 17:58:59,725 - BankG99 -INFO - password provided
+2021-12-04 17:59:03,063 - BankG99 -INFO - Login passed
+2021-12-04 17:59:08,393 - BankG99 -INFO - addNewCustomer: UserName is provided
+2021-12-04 17:59:08,447 - BankG99 -INFO - addNewCustomer: Passsword is provided
+2021-12-04 17:59:12,059 - BankG99 -INFO - addNewCustomer: Providing Customer Details!!
+2021-12-04 17:59:17,463 - BankG99 -INFO - teardown

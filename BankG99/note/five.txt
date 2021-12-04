@@ -1,0 +1,27 @@
+DDT
+Add new TC- TC_02LoginDDTTest.java
+testdata xls- give correct path in testcase- TC_02LoginDDTTest
+Add this testcase to testng.xml
+XLUtils.java
+no changes in baseclass
+
+Run testng.xml fiel
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="bank99">  
+
+<listeners>
+		<listener class-name="com.bankg99.utilities.Reporting" />
+	</listeners>
+
+  <test thread-count="5" name="systemTest">
+   <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <!-- <class name="com.bankg99.testcases.BaseClass"/>    no @Test -->
+      <class name="com.bankg99.testcases.TC_01LoginTest"/>
+       <class name="com.bankg99.testcases.TC_02LoginDDTTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

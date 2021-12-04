@@ -1,0 +1,95 @@
+Add new pageobject class for the webpage
+Add new testcase
+Add the test case to testng.xml
+
+changes in baseclass & in testng.xml
+new pageobject class
+new testcse class
+
+Run testng.xml file
+
+***********************************************
+
+@Parameters("browser")
+	@BeforeClass
+	public void setup(String br)
+	{
+		          //System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+		         //System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
+	            // driver = new ChromeDriver();
+		logger = Logger.getLogger("BankG99");
+		PropertyConfigurator.configure("log4j.properties");
+		
+		
+		if(br.equals("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
+			driver=new ChromeDriver();
+		}
+		else if(br.equals("firefox"))
+		{
+			System.setProperty("webdriver.gecko.driver",readconfig.getFirefoxPath());
+			driver = new FirefoxDriver();
+		}
+		else if(br.equals("ie"))
+		{
+			System.setProperty("webdriver.ie.driver",readconfig.getIEPath());
+			driver = new InternetExplorerDriver();
+		}
+		
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.get(baseURL);
+	}
+	
+	public void captureScreen(WebDriver driver, String tname) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File target = new File(System.getProperty("user.dir") + "/Screenshots/" + tname + ".png");
+		FileUtils.copyFile(source, target);
+		System.out.println("Screenshot taken");
+		logger.info("Failed test Screenshot is taken");
+	}
+
+
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
+	}
+	
+	//AddCustomerPage
+		public String randomestring()
+		{
+			logger.info("teardown");
+
+			driver.quit();
+			System.out.println("in teardown method");
+			String generatedstring=RandomStringUtils.randomAlphabetic(8);
+			return(generatedstring);
+		}
+
+		//AddCustomerPage
+		public static String randomeNum() {
+			String generatedString2 = RandomStringUtils.randomNumeric(4);
+			return (generatedString2);
+		}
+}
+****************************************************************************************************************************
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="bank99">  
+
+<listeners>
+		<listener class-name="com.bankg99.utilities.Reporting" />
+	</listeners>
+
+  <test thread-count="5" name="systemTest">
+   <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <!-- <class name="com.bankg99.testcases.BaseClass"/>    no @Test -->
+      <class name="com.bankg99.testcases.TC_01LoginTest"/>
+       <class name="com.bankg99.testcases.TC_02LoginDDTTest"/>
+         <class name="com.bankg99.testcases.TC_03AddCustomerTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

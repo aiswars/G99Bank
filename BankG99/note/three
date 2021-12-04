@@ -1,0 +1,103 @@
+TestNG generation
+Crossbrowser testing- (not parallel testing -one by one by changing the browser name in <parameters> tag)
+Generated testng.xml file
+<parameters> tag in testng.xml file to pass browser name - cross browser testing
+testng.xml- <parameters>tag & @parameters in BaseClass
+Run testng.xml Run As testng suite - not testcase run as testng test
+
+Chnages in BaseClass & testng.xml file
+
+output- - test_output - index.html.
+output-testngreport>> testoutput- bank99-systemTest.html
+output- also testng.xml file report - testoutput-as given in Reporting.java format- G99BankTest-Report-2021.12.04.17.27.07.html
+
+**********************************************************************************
+
+public class BaseClass {
+	
+	ReadConfig readconfig = new ReadConfig();
+
+	public String baseURL = readconfig.getApplicationURL();
+	public String username = readconfig.getUsername();
+	public String password = readconfig.getPassword();
+	
+	public static WebDriver driver;
+	public static Logger logger;
+	
+	
+	@Parameters("browser")
+	@BeforeClass
+	public void setup(String br)
+	{
+		          //System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+		         //System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
+	            // driver = new ChromeDriver();
+		logger = Logger.getLogger("BankG99");
+		PropertyConfigurator.configure("log4j.properties");
+		
+		
+		if(br.equals("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
+			driver=new ChromeDriver();
+		}
+		else if(br.equals("firefox"))
+		{
+			System.setProperty("webdriver.gecko.driver",readconfig.getFirefoxPath());
+			driver = new FirefoxDriver();
+		}
+		else if(br.equals("ie"))
+		{
+			System.setProperty("webdriver.ie.driver",readconfig.getIEPath());
+			driver = new InternetExplorerDriver();
+		}
+		driver.get(baseURL);
+	}
+
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
+	}
+	
+}
+*********************************************************************************
+
+public class TC_01LoginTest extends BaseClass {
+
+	@Test
+	public void LoginTest()
+	{
+		driver.get(baseURL);
+		logger.info("URL is opened");
+		
+		LoginPageObject lp = new LoginPageObject(driver);
+		lp.setUserName(username);   logger.info("TC1- Entered username");
+		lp.setPassword(password);   logger.info("TC1- Entered password");
+		lp.clickLogin();            logger.info("TC1- Login is clicked");
+
+		if(driver.getTitle().equals("Guru99 Bank Manager HomePage"))
+		{
+			Assert.assertTrue(true);
+			logger.info("TC1- Login test passed");
+		}
+		else
+		{
+
+			Assert.assertTrue(false);
+			logger.info("TC1- Login test failed");
+		}
+	}
+
+}
+*************************************************<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="bank99">  
+  <test thread-count="5" name="systemTest">
+   <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <!-- <class name="com.bankg99.testcases.BaseClass"/>    no @Test -->
+      <class name="com.bankg99.testcases.TC_01LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

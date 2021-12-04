@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [bank99]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.bankg99.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="systemTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.bankg99.testcases.TC_03AddCustomerTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="addNewCustomer"/>
+        </methods>
+      </class> <!-- com.bankg99.testcases.TC_03AddCustomerTest -->
+      <class name="com.bankg99.testcases.TC_02LoginDDTTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="loginDDT" invocation-numbers="0 1 2 4"/>
+        </methods>
+      </class> <!-- com.bankg99.testcases.TC_02LoginDDTTest -->
+    </classes>
+  </test> <!-- systemTest(failed) -->
+</suite> <!-- Failed suite [bank99] -->
