@@ -3,7 +3,7 @@ ReadConfig.java utility file
 
 Baseclass is changed
 no changes in TC_001LoginTest
-
+Run As testng test
 output- - test_output - index.html.
 output-testngreport>> testoutput- bank99-systemTest.html
 *******************************************************************
